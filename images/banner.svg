@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="bg" cx="78%" cy="45%" r="85%"><stop offset="0" stop-color="#34208a"/><stop offset=".5" stop-color="#121848"/><stop offset="1" stop-color="#070a20"/></radialGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#9fbcff" stop-opacity=".95"/><stop offset="1" stop-color="#9fbcff" stop-opacity="0"/></radialGradient>
+<radialGradient id="hot"><stop offset="0" stop-color="#ffb46b"/><stop offset="1" stop-color="#ffb46b" stop-opacity="0"/></radialGradient>
+<radialGradient id="sph" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#8fb0ff" stop-opacity=".55"/><stop offset=".6" stop-color="#4b3fc8" stop-opacity=".22"/><stop offset="1" stop-color="#1a1460" stop-opacity=".1"/></radialGradient>
+<linearGradient id="ln" x1="0" x2="1"><stop offset="0" stop-color="#6f93ff"/><stop offset="1" stop-color="#c39bff"/></linearGradient>
+<linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#fff" stop-opacity=".65"/><stop offset=".8" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<mask id="m"><rect width="1600" height="560" fill="url(#fade)"/></mask>
+<pattern id="lat" width="96" height="80" patternUnits="userSpaceOnUse" x="20" y="30">
+<path d="M0 0H96M0 0V80" stroke="#7fa0ff" stroke-width="1.1" opacity=".4"/><circle r="3" fill="#c6d4ff"/><circle r="9" fill="url(#glow)" opacity=".35"/></pattern>
+</defs>
+<rect width="1600" height="560" fill="url(#bg)"/>
+<g fill="#fff">
+<circle cx="120" cy="40" r="1.2" opacity=".7"/><circle cx="410" cy="500" r="1" opacity=".5"/><circle cx="700" cy="60" r="1.4" opacity=".8"/><circle cx="880" cy="470" r="1" opacity=".6"/><circle cx="960" cy="120" r="1.6" opacity=".8"/><circle cx="1100" cy="520" r="1.2" opacity=".7"/><circle cx="1450" cy="60" r="1.4" opacity=".8"/><circle cx="1540" cy="300" r="1" opacity=".6"/><circle cx="1010" cy="330" r="1" opacity=".5"/><circle cx="1210" cy="40" r="1" opacity=".6"/><circle cx="1500" cy="500" r="1.2" opacity=".7"/>
+</g>
+<rect width="1600" height="560" fill="url(#lat)" mask="url(#m)"/>
+<!-- entangled qubits -->
+<g fill="none" stroke="#ffb46b" stroke-width="1.4" stroke-dasharray="4 5" opacity=".6">
+<path d="M212 110Q400 -10 596 110"/><path d="M116 270Q330 150 500 270"/><path d="M404 350Q600 230 788 350"/><path d="M596 190Q760 90 884 190"/>
+</g>
+<g><circle cx="212" cy="110" r="16" fill="url(#glow)"/><circle cx="212" cy="110" r="4" fill="#fff"/>
+<circle cx="596" cy="110" r="16" fill="url(#glow)"/><circle cx="596" cy="110" r="4" fill="#fff"/>
+<circle cx="116" cy="270" r="14" fill="url(#glow)"/><circle cx="116" cy="270" r="4" fill="#fff"/>
+<circle cx="500" cy="270" r="14" fill="url(#glow)"/><circle cx="500" cy="270" r="4" fill="#fff"/>
+<circle cx="404" cy="350" r="14" fill="url(#glow)"/><circle cx="404" cy="350" r="4" fill="#fff"/>
+<circle cx="788" cy="350" r="14" fill="url(#glow)"/><circle cx="788" cy="350" r="4" fill="#fff"/></g>
+<!-- quantum circuit along the bottom -->
+<g stroke="url(#ln)" stroke-width="1.8" opacity=".75"><path d="M840 470H1600M840 520H1600"/></g>
+<g stroke="#ffb46b" stroke-width="2"><path d="M900 470V520M1060 470V520"/></g>
+<g fill="#ffb46b"><circle cx="900" cy="470" r="5"/><circle cx="1060" cy="520" r="5"/></g>
+<g fill="#0d1240" stroke="#ffb46b" stroke-width="2"><circle cx="900" cy="520" r="11"/><circle cx="1060" cy="470" r="11"/></g>
+<g fill="#141a4a" stroke="#8fb0ff" stroke-width="1.8"><rect x="960" y="504" width="32" height="32" rx="7"/><rect x="1130" y="454" width="32" height="32" rx="7"/><rect x="1210" y="504" width="32" height="32" rx="7"/></g>
+<g fill="#fff" font-family="sans-serif" font-size="14" text-anchor="middle"><text x="976" y="526">Rz</text><text x="1146" y="476">H</text><text x="1226" y="526">Ry</text></g>
+<!-- Bloch sphere -->
+<g transform="translate(1250 215) scale(.92)">
+<circle r="200" fill="url(#hot)" opacity=".12"/>
+<circle r="150" fill="url(#sph)" stroke="#a9bcff" stroke-width="1.6" opacity=".95"/>
+<ellipse rx="150" ry="44" fill="none" stroke="#a9bcff" stroke-width="1.4" opacity=".8"/>
+<ellipse rx="52" ry="150" fill="none" stroke="#a9bcff" stroke-width="1" opacity=".4"/>
+<ellipse rx="110" ry="150" fill="none" stroke="#a9bcff" stroke-width="1" opacity=".3"/>
+<path d="M0-176V176M-176 0H176" stroke="#c6d4ff" stroke-width="1" opacity=".5"/>
+<path d="M-118 -60L-96-46" stroke="#c6d4ff" opacity="0"/>
+<!-- state trajectory -->
+<path d="M-80 60C-60-10 20-90 78-96" fill="none" stroke="#ffb46b" stroke-width="2.4" stroke-dasharray="3 6"/>
+<path d="M0 0L78-96" stroke="#ffd29a" stroke-width="3.5"/>
+<path d="M78-96L60-84M78-96L69-72" stroke="#ffd29a" stroke-width="3.5"/>
+<circle cx="78" cy="-96" r="22" fill="url(#hot)"/><circle cx="78" cy="-96" r="6" fill="#fff"/>
+<path d="M78-96V0L0 0" fill="none" stroke="#ffd29a" stroke-width="1" stroke-dasharray="3 4" opacity=".6"/>
+<circle r="5" fill="#fff"/>
+<g fill="#dfe6ff" font-family="serif" font-style="italic" font-size="22"><text x="-14" y="-186">|0⟩</text><text x="-14" y="204">|1⟩</text></g>
+</g>
+<!-- wavefunction ripples -->
+<g fill="none" stroke="url(#ln)" stroke-width="1.4">
+<path opacity=".45" d="M0 500C100 460 200 540 300 500S500 460 600 500"/>
+<path opacity=".3" d="M0 520C110 480 190 560 300 520S510 480 600 520"/>
+</g>
+</svg>

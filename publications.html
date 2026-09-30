@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="styles.css"><title>Publications · QSC Lab, MTSU</title><meta name="description" content="Publications from the Quantum Simulation and Computation Group."></head><body><div id="hdr"></div>
+<div class="hero small"><div class="wrap"><h1>Publications</h1></div></div>
+<section><div class="wrap"><p>Full list on <a href="https://scholar.google.com/citations?user=ZXcbxWIAAAAJ&hl=en">Google Scholar</a>.</p>
+<div class="filters" id="f"></div><div id="list"></div></div></section>
+<div id="ftr"></div><script src="main.js"></script>
+<script>
+const P=[
+[2026,"An efficient algorithm for approximate shadow Hamiltonian simulation","A. Chakraborty, B. Sambasivam, K. Shirali, H. Nelson, M. Ramoa, et al.","arXiv:2607.11882",["Quantum computing","Many-body"]],
+[2025,"The phase diagram of quantum chromodynamics in one dimension on a quantum computer","A. T. Than, Y. Y. Atas, A. Chakraborty, J. Zhang, M. T. Diaz, K. Wen, X. Liu, et al.","Nature Communications 16, 10288",["Quantum computing","High-energy physics"]],
+[2025,"Charge-singlet measurement toolbox","A. Chakraborty, R. Lewis, C. A. Muschik","Phys. Rev. Research 7, 043162",["Quantum computing","High-energy physics"]],
+[2025,"Excitation-inhibition balance in cortical networks with heterogeneous cluster sizes","A. Chakraborty, G. Morrison","arXiv:2508.12541",["Dynamical systems","Neuroscience"]],
+[2025,"Quantum aspects of spacetime: A quantum optics view","C. R. Ordonez, A. Chakraborty, H. E. Camblong, M. O. Scully, W. G. Unruh","Philosophical Magazine, 1–68","Relativistic QI"],
+[2025,"Path integral derivation of the thermofield double state in causal diamonds","A. Chakraborty, C. R. Ordonez, G. Valdivia-Mera","Class. Quantum Grav. 42, 025015","Relativistic QI"],
+[2024,"Conformal quantum mechanics of causal diamonds: Time evolution, thermality…","H. E. Camblong, A. Chakraborty, P. Lopez-Duque, C. R. Ordonez","Phys. Rev. D 110, 124043","Relativistic QI"],
+[2024,"Entanglement degradation in causal diamonds","H. E. Camblong, A. Chakraborty, P. Lopez-Duque, C. R. Ordonez","Phys. Rev. D 109, 105003","Relativistic QI"],
+[2024,"Quantum computing with trapped ions: a beginner's guide","F. Bernardini, A. Chakraborty, C. R. Ordonez","Eur. J. Phys. 45, 013001","Quantum computing"],
+[2023,"Spectral properties of the symmetry generators of conformal quantum mechanics…","H. E. Camblong, A. Chakraborty, P. Lopez Duque, C. R. Ordonez","J. Math. Phys. 64(9)","Many-body"],
+[2022,"Thermal effect in a causal diamond: Open quantum systems approach","A. Chakraborty, H. E. Camblong, C. R. Ordonez","Phys. Rev. D 106, 045027","Relativistic QI"],
+[2021,"Acceleration radiation of an atom freely falling into a Kerr black hole…","A. Azizi, H. E. Camblong, A. Chakraborty, C. R. Ordonez, M. O. Scully","Phys. Rev. D 104, 065006","Relativistic QI"],
+[2021,"Quantum optics meets black hole thermodynamics via conformal quantum mechanics: I…","A. Azizi, H. E. Camblong, A. Chakraborty, C. R. Ordonez, M. O. Scully","Phys. Rev. D 104, 084086","Relativistic QI"],
+[2021,"Quantum optics meets black hole thermodynamics via conformal quantum mechanics: II…","A. Azizi, H. E. Camblong, A. Chakraborty, C. R. Ordonez, M. O. Scully","Phys. Rev. D 104, 084085","Relativistic QI"],
+[2021,"Quantum anomaly and thermodynamics of one-dimensional fermions…","H. E. Camblong, A. Chakraborty, W. S. Daza, J. E. Drut, C. L. Lin, C. R. Ordonez","Ann. Phys. 429, 168466","Many-body"],
+[2020,"Near-horizon aspects of acceleration radiation by free fall of an atom into a black hole","H. E. Camblong, A. Chakraborty, C. R. Ordonez","Phys. Rev. D 102, 085010","Relativistic QI"],
+[2019,"Spectral density, Levinson's theorem, and the extra term in the second virial coefficient…","H. E. Camblong, A. Chakraborty, W. S. Daza, J. E. Drut, C. L. Lin, C. R. Ordonez","Phys. Rev. A 100, 062110","Many-body"],
+[2019,"Dynamical systems analysis of a χ-essence model","A. Chakraborty, A. Ghosh, N. Banerjee","Phys. Rev. D 99, 103513",["Dynamical systems","Cosmology"]],
+[2019,"Thawing versus tracker solutions: a dynamical systems approach","A. Chakraborty, N. Banerjee, A. Ghosh","Gen. Relativ. Gravit. 51, 5",["Dynamical systems","Cosmology"]]];
+const tags=p=>Array.isArray(p[4])?p[4]:[p[4]];
+const topics=["All",...new Set(P.flatMap(tags))];let sel="All";
+const f=document.getElementById("f"),l=document.getElementById("list");
+function draw(){f.innerHTML=topics.map(t=>`<button class="${t===sel?"on":""}" data-t="${t}">${t}</button>`).join("");
+l.innerHTML=P.filter(p=>sel==="All"||tags(p).includes(sel)).map(p=>`<div class="pub"><div class="t">${p[1]}</div><div class="m">${p[2]}</div><div class="m">${p[3]} (${p[0]}) ${tags(p).map(t=>`<span class="tag">${t}</span>`).join("")}</div></div>`).join("");}
+f.onclick=e=>{if(e.target.dataset.t){sel=e.target.dataset.t;draw()}};draw();
+</script></body></html>

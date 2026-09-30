@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="bg" cx="65%" cy="30%" r="90%"><stop offset="0" stop-color="#2a1a6e"/><stop offset="1" stop-color="#080b24"/></radialGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#9fbcff" stop-opacity="0"/></radialGradient>
+<linearGradient id="ln" x1="0" x2="1"><stop offset="0" stop-color="#6f93ff"/><stop offset="1" stop-color="#ff9fd0"/></linearGradient>
+<linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f93ff" stop-opacity=".3"/><stop offset="1" stop-color="#6f93ff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="800" height="450" fill="url(#bg)"/>
+<g stroke="#b7c8ff" opacity=".18"><path d="M70 90H740M70 160H740M70 230H740M70 300H740M180 50V380M320 50V380M460 50V380M600 50V380"/></g>
+<path d="M70 380V50M70 380H740" stroke="#b7c8ff" opacity=".6" fill="none"/>
+<path d="M70 380C200 372 300 270 380 205S600 95 740 72V380Z" fill="url(#fill)"/>
+<path d="M70 380C200 372 300 270 380 205S600 95 740 72" fill="none" stroke="url(#ln)" stroke-width="3.5"/>
+<g fill="none" stroke="#ffb46b" stroke-width="1.5">
+<path opacity=".8" d="M90 150C130 120 170 180 210 150S290 120 330 150 410 180 450 150 530 120 570 150 650 180 720 150"/>
+<path opacity=".62" d="M90 175C130 145 170 205 210 175S290 145 330 175 410 205 450 175 530 145 570 175 650 205 720 175"/>
+<path opacity=".45" d="M90 200C130 170 170 230 210 200S290 170 330 200 410 230 450 200 530 170 570 200 650 230 720 200"/>
+</g>
+<circle cx="380" cy="205" r="28" fill="url(#glow)" opacity=".55"/><circle cx="380" cy="205" r="7" fill="#fff"/>
+<g fill="#dfe6ff" font-family="sans-serif" font-size="15"><text x="398" y="192">critical point</text><text x="110" y="360" fill="#9fb0e6" font-size="13">phase A</text><text x="600" y="150" fill="#9fb0e6" font-size="13">phase B</text></g>
+</svg>

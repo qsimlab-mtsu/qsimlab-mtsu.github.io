@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="80%"><stop offset="0" stop-color="#2a1a6e"/><stop offset="1" stop-color="#080b24"/></radialGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#9fbcff"/><stop offset="1" stop-color="#9fbcff" stop-opacity="0"/></radialGradient>
+<radialGradient id="hot"><stop offset="0" stop-color="#ffb46b"/><stop offset="1" stop-color="#ffb46b" stop-opacity="0"/></radialGradient>
+<pattern id="g" width="100" height="90" patternUnits="userSpaceOnUse" x="50" y="45"><path d="M0 0H100M0 0V90" stroke="#7fa0ff" stroke-width="1.6" opacity=".55"/><circle r="4" fill="#c6d4ff"/><circle r="14" fill="url(#glow)" opacity=".35"/></pattern>
+</defs>
+<rect width="800" height="450" fill="url(#bg)"/>
+<rect width="800" height="450" fill="url(#g)"/>
+<!-- plaquette highlight -->
+<path d="M250 225H350V315H250Z" fill="#ffb46b" fill-opacity=".18" stroke="#ffb46b" stroke-width="2.5"/>
+<path d="M450 135H550V225H450Z" fill="#a583ff" fill-opacity=".2" stroke="#a583ff" stroke-width="2.5"/>
+<g><circle cx="250" cy="225" r="26" fill="url(#hot)"/><circle cx="350" cy="315" r="26" fill="url(#hot)"/><circle cx="550" cy="135" r="26" fill="url(#glow)"/><circle cx="450" cy="225" r="26" fill="url(#glow)"/>
+<circle cx="250" cy="225" r="6" fill="#fff"/><circle cx="350" cy="315" r="6" fill="#fff"/><circle cx="550" cy="135" r="6" fill="#fff"/><circle cx="450" cy="225" r="6" fill="#fff"/></g>
+<!-- flux/entanglement arcs -->
+<path d="M250 225Q400 60 550 135" fill="none" stroke="#ffb46b" stroke-width="2" stroke-dasharray="5 6"/>
+<path d="M350 315Q520 400 650 315" fill="none" stroke="#ffb46b" stroke-width="2" stroke-dasharray="5 6" opacity=".7"/>
+<circle cx="650" cy="315" r="6" fill="#fff"/><circle cx="650" cy="315" r="24" fill="url(#hot)"/>
+</svg>
